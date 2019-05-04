@@ -10,7 +10,7 @@ namespace ValeActivitiesCentre.Models
 
         /// <summary>
         /// A section of the client profile where details are written about
-        /// the most effective way of supporting and communciating with the 
+        /// the most effective way of supporting and communicating with the 
         /// client
         /// </summary>
         [Display(Name ="What works for me")]

@@ -26,7 +26,7 @@ namespace ValeActivitiesCentre.Models
         /// <summary>
         /// The phone number of a person, assigned to a home phone.
         /// </summary>
-        [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
+        [Required, StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
         public string PrimaryPhoneNumber { get; set; }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace ValeActivitiesCentre.Models
         /// <summary>
         /// An e-mail address held by a person by which they can be contacted
         /// </summary>
-        [Required, StringLength(100), Display(Name = "E-mail Address")]
+        [StringLength(100), Display(Name = "E-mail Address")]
         public string Email { get; set; }
 
         /// <summary>
@@ -74,9 +74,9 @@ namespace ValeActivitiesCentre.Models
             get { return FirstName + " " + LastName;  }
         }
 
-        public Staff Staff { get; set; }
+        public virtual Staff Staff { get; set; }
 
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
 
     }
 }

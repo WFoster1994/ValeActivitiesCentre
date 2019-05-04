@@ -38,13 +38,13 @@ namespace ValeActivitiesCentre.Models
         /// <summary>
         /// The name of the street the person lives on as part of their declared address.
         /// </summary>
-        [StringLength(30), Display(Name = "Street Name")]
+        [Required, StringLength(30), Display(Name = "Street Name")]
         public string StreetName { get; set; }
 
         /// <summary>
         /// The name of the town the person lives in.
         /// </summary>
-        [Required, StringLength(30), Display(Name = "Town Name")]
+        [StringLength(30), Display(Name = "Town Name")]
         public string TownName { get; set; }
 
         /// <summary>

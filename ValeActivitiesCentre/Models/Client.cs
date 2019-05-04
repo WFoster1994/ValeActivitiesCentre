@@ -24,6 +24,7 @@ namespace ValeActivitiesCentre.Models
         /// The funding that the client is receiving in
         /// order to pay for their service.
         /// </summary>
+        [Required]
         public FundingOptions Funding { get; set; }
 
         public virtual ClientProfile ClientProfile { get; set; }
