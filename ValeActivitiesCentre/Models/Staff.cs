@@ -56,7 +56,6 @@ namespace ValeActivitiesCentre.Models
         public string Profile { get; set; }
 
         public virtual Person Person { get; set; }
-
-        
+                
     }
 }

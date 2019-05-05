@@ -26,7 +26,7 @@ namespace ValeActivitiesCentre.Models
         /// <summary>
         /// The phone number of a person, assigned to a home phone.
         /// </summary>
-        [Required, StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
+        [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
         public string PrimaryPhoneNumber { get; set; }
 
         /// <summary>

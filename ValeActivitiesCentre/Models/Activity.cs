@@ -40,7 +40,7 @@ namespace ValeActivitiesCentre.Models
         /// The name of the activity e.g. cooking
         /// or social trip.
         /// </summary>
-        [StringLength(30)]
+        [Required, StringLength(30)]
         public string Name { get; set; }
 
         /// <summary>
@@ -56,14 +56,14 @@ namespace ValeActivitiesCentre.Models
         /// The choices are monday to friday as the centre
         /// is closed Saturday ad Sunday
         /// </summary>
-        [Display(Name ="Day of Activity")]
+        [Required, Display(Name ="Day of Activity")]
         public DayOptions Day { get; set; }
 
         /// <summary>
         /// The time slot that the activities takes 
         /// place in. This is either an AM or PM slot.
         /// </summary>
-        [Display(Name ="Activity Time Slot")]
+        [Required, Display(Name ="Activity Time Slot")]
         public TimeOptions Time { get; set; }
 
         public virtual ICollection<Person> People { get; set; }
