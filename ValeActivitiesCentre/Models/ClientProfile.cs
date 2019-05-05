@@ -30,5 +30,8 @@ namespace ValeActivitiesCentre.Models
         /// </summary>
         [Display(Name ="Goals and Objectives")]
         public string GoalsAndObjectives { get; set; }
+
+        public virtual Client Client { get; set; }
     }
+
 }

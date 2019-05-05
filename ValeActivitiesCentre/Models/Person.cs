@@ -27,13 +27,13 @@ namespace ValeActivitiesCentre.Models
         /// The phone number of a person, assigned to a home phone.
         /// </summary>
         [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
-        public string PrimaryPhoneNumber { get; set; }
+        public string HomePhoneNumber { get; set; }
 
         /// <summary>
         /// The phone number of a person, assigned to their mobile phone.
         /// </summary>
         [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Mobile Phone")]
-        public string SecondaryPhoneNumber { get; set; }
+        public string MobilePhoneNumber { get; set; }
 
         /// <summary>
         /// An e-mail address held by a person by which they can be contacted
