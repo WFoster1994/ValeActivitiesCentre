@@ -21,15 +21,16 @@ namespace ValeActivitiesCentre.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-            SeedActivity(context);
-            SeedAddress(context);
+            SeedActivities(context);
+            SeedAddresses(context);
             SeedClients(context);
+            SeedClientProfiles(context);
             SeedPeople(context);
             SeedStaff(context);
         }
 
         //Seed methods displayed in alphabetical order
-        private void SeedActivity(ValeDbContext context)
+        private void SeedActivities(ValeDbContext context)
         {
             var ActivityList = new List<Activity>
             {
@@ -142,7 +143,7 @@ namespace ValeActivitiesCentre.Migrations
             ActivityList.ForEach(s => context.Activities.AddOrUpdate(p => p.ActivityID, s));
         }
 
-        private void SeedAddress(ValeDbContext context)
+        private void SeedAddresses(ValeDbContext context)
         {
             var AddressList = new List<Address>
             {
@@ -317,6 +318,63 @@ namespace ValeActivitiesCentre.Migrations
                 }
             };
             ClientList.ForEach(s => context.Clients.AddOrUpdate(p => p.ClientID, s));
+        }
+
+        private void SeedClientProfiles(ValeDbContext context)
+        {
+            var ClientProfileList = new List<ClientProfile>
+            {
+                new ClientProfile
+                {
+                    ClientProfileID = 8,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 9,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 10,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 11,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 12,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 13,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                },
+                new ClientProfile
+                {
+                    ClientProfileID = 14,
+                    BestComunicationApproach = "",
+                    PoorCoomunicationApproach = "",
+                    GoalsAndObjectives = ""
+                }
+            };
+            ClientProfileList.ForEach(s => context.ClientProfiles.AddOrUpdate(p => p.ClientProfileID, s));
         }
 
         private void SeedPeople(ValeDbContext context)
@@ -507,6 +565,113 @@ namespace ValeActivitiesCentre.Migrations
             PersonList.ForEach(s => context.People.AddOrUpdate(p => p.PersonID, s));
                         
         }
+
+        private void SeedRiskAssessments(ValeDbContext context)
+        {
+            var RiskAssessmentList = new List<RiskAssessment>
+            {
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 8,
+                    PhysicalHealthNotes = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor " +
+                    "incididunt ut labore et dolore magna aliqua",
+                    MentalHealthNotes = "Ut enim ad minim veniam, quis " +
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " +
+                    "ex ea commodo consequat.",
+                    SocialHealthNotes = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    OtherNotes = ""
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 9,
+                    PhysicalHealthNotes = "Excepteur sint occaecat cupidatat non " +
+                    "proident, sunt in culpa qui officia deserunt mollit anim id " +
+                    "est laborum.",
+                    MentalHealthNotes = "Viverra suspendisse potenti nullam ac tortor. " +
+                    "Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. " +
+                    "Placerat duis ultricies lacus sed. Dapibus ultrices in iaculis " +
+                    "nunc sed augue. Semper auctor neque vitae tempus quam pellentesque nec",
+                    SocialHealthNotes = "Arcu odio ut sem nulla pharetra diam. Porttitor leo a " +
+                    "diam sollicitudin tempor id eu. Odio ut enim blandit volutpat maecenas " +
+                    "volutpat blandit aliquam etiam.",
+                    OtherNotes = "Pretium viverra suspendisse potenti nullam ac tortor."
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 10,
+                    PhysicalHealthNotes = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor " +
+                    "incididunt ut labore et dolore magna aliqua",
+                    MentalHealthNotes = "Ut enim ad minim veniam, quis " +
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " +
+                    "ex ea commodo consequat.",
+                    SocialHealthNotes = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    OtherNotes = "Pharetra massa massa ultricies mi."
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 11,
+                    PhysicalHealthNotes = "Sed ut perspiciatis unde omnis iste " +
+                    "natus error sit voluptatem accusantium doloremque laudantium.",
+                    MentalHealthNotes = "Lorem ipsum dolor sit amet, consectetur " +
+                    "adipiscing elit, sed do eiusmod tempor incididunt ut labore " +
+                    "et dolore magna aliqua.",
+                    SocialHealthNotes = "It is a long established fact that a " +
+                    "reader will be distracted by the readable content of a page when looking at its layout.",
+                    OtherNotes = "Lorem Ipsum is simply dummy text of the " +
+                    "printing and typesetting industry. Lorem Ipsum has been " +
+                    "the industry's standard dummy text ever since the 1500s"
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 12,
+                    PhysicalHealthNotes = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor " +
+                    "incididunt ut labore et dolore magna aliqua",
+                    MentalHealthNotes = "Ut enim ad minim veniam, quis " +
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " +
+                    "ex ea commodo consequat.",
+                    SocialHealthNotes = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    OtherNotes = ""
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 13,
+                    PhysicalHealthNotes = "Te consequuntur conclusionemque nec.",
+                    MentalHealthNotes = "Vix tation doctus reprimique ut. " +
+                    "Vel at maiestatis reprehendunt, ex mel verterem gloriatur " +
+                    "abhorreant. In labores nostrum his, duo ea soleat " +
+                    "euripidis ullamcorper. Vim et elit meis",
+                    SocialHealthNotes = "Id nec dico laudem aliquam, offendit " +
+                    "recteque forensibus no quo, per suscipit ullamcorper instructior in." +
+                    " His voluptua dignissim no. Pro id dolor senserit accusamus, " +
+                    "quo ea postea option discere. Eum semper corrumpit voluptaria cu. " +
+                    "Ex pri quem nobis scribentur. An mei aliquip inimicus, modus " +
+                    "eligendi cum in, per tation adipisci no.",
+                    OtherNotes = "Ea putant torquatos scripserit sea, " +
+                    "ius veri aperiri deleniti te, duo cu quas scripta."
+                },
+                new RiskAssessment
+                {
+                    RiskAssessmentID = 14,
+                    PhysicalHealthNotes = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor " +
+                    "incididunt ut labore et dolore magna aliqua",
+                    MentalHealthNotes = "Ut enim ad minim veniam, quis " +
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " +
+                    "ex ea commodo consequat.",
+                    SocialHealthNotes = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    OtherNotes = ""
+                }
+            };
+            RiskAssessmentList.ForEach(s => context.RiskAssessments.AddOrUpdate(p => p.RiskAssessmentID, s));
+        }
+
         private void SeedStaff(ValeDbContext context)
         {
             var StaffList = new List<Staff>

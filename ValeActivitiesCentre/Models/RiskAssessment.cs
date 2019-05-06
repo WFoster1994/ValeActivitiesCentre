@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -12,6 +13,7 @@ namespace ValeActivitiesCentre.Models
         /// A specific identification number assigned
         /// to each risk assessment.
         /// </summary>
+        [ForeignKey("Client")]
         public int RiskAssessmentID { get; set; }
 
         /// <summary>
