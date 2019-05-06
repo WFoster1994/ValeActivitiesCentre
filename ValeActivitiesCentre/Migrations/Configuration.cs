@@ -21,9 +21,11 @@ namespace ValeActivitiesCentre.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            SeedActivity(context);
             SeedAddress(context);
-
+            SeedClients(context);
             SeedPeople(context);
+            SeedStaff(context);
         }
 
         //Seed methods displayed in alphabetical order
@@ -274,6 +276,49 @@ namespace ValeActivitiesCentre.Migrations
             AddressList.ForEach(s => context.Addresses.AddOrUpdate(p => p.AddressID, s));
         }
 
+        private void SeedClients(ValeDbContext context)
+        {
+            var ClientList = new List<Client>
+            {
+                new Client
+                {
+                    ClientID = 8,
+                    Funding = FundingOptions.COUNCIL_FUNDED
+                },
+                new Client
+                {
+                    ClientID = 9,
+                    Funding = FundingOptions.COUNCIL_FUNDED
+                },
+                new Client
+                {
+                    ClientID = 10,
+                    Funding = FundingOptions.PRIVATE_FUNDING
+                },
+                new Client
+                {
+                    ClientID = 11,
+                    Funding = FundingOptions.COUNCIL_FUNDED
+                },
+                new Client
+                {
+                    ClientID = 12,
+                    Funding = FundingOptions.COUNCIL_FUNDED
+                },
+                new Client
+                {
+                    ClientID = 13,
+                    Funding = FundingOptions.PRIVATE_FUNDING
+                },
+                new Client
+                {
+                    ClientID = 14,
+                    Funding = FundingOptions.PRIVATE_FUNDING
+                }
+            };
+            ClientList.ForEach(s => context.Clients.AddOrUpdate(p => p.ClientID, s));
+        }
+
         private void SeedPeople(ValeDbContext context)
         {          
 
@@ -460,6 +505,63 @@ namespace ValeActivitiesCentre.Migrations
                 }
             };
             PersonList.ForEach(s => context.People.AddOrUpdate(p => p.PersonID, s));
+                        
+        }
+        private void SeedStaff(ValeDbContext context)
+        {
+            var StaffList = new List<Staff>
+            {
+                new Staff
+                {
+                    StaffID = 1,
+                    Department = DepartmentOptions.CARE,
+                    JobPosition = JobPositionOptions.ACTIVITIES_ORGANISER,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 2,
+                    Department = DepartmentOptions.MANAGEMENT,
+                    JobPosition = JobPositionOptions.COMPANY_DIRECTOR,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 3,
+                    Department = DepartmentOptions.MANAGEMENT,
+                    JobPosition = JobPositionOptions.COMPANY_DIRECTOR,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 4,
+                    Department = DepartmentOptions.MANAGEMENT,
+                    JobPosition = JobPositionOptions.SITE_MANAGER,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 5,
+                    Department = DepartmentOptions.CARE,
+                    JobPosition = JobPositionOptions.ACTIVITIES_ORGANISER,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 6,
+                    Department = DepartmentOptions.CARE,
+                    JobPosition = JobPositionOptions.SITE_SUPERVISOR,
+                    Profile = ""
+                },
+                new Staff
+                {
+                    StaffID = 7,
+                    Department = DepartmentOptions.CARE,
+                    JobPosition = JobPositionOptions.APPRENTICE,
+                    Profile = ""
+                }
+            };
+            StaffList.ForEach(s => context.Staffs.AddOrUpdate(p => p.StaffID, s));
         }
     }
 }
