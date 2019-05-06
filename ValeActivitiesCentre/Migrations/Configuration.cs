@@ -21,16 +21,123 @@ namespace ValeActivitiesCentre.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            SeedAddress(context);
 
             SeedPeople(context);
         }
 
+        //Seed methods displayed in alphabetical order
         private void SeedActivity(ValeDbContext context)
         {
             var ActivityList = new List<Activity>
             {
-
+                //First 5 are Mon - Fri AM activities
+                new Activity
+                {
+                    ActivityID = 1,
+                    Name = "Social Outing",
+                    Description = "An opportunity for members " +
+                    "to get out into the town for a drink and to " +
+                    "chat with other members and staff.",
+                    Day = DayOptions.MONDAY,
+                    Time = TimeOptions.AM
+                },
+                new Activity
+                {
+                    ActivityID = 2,
+                    Name = "Hobbies and Games",
+                    Description = "A relaxed session for our members who " +
+                    "prefer to stay in ",
+                    Day = DayOptions.TUESDAY,
+                    Time = TimeOptions.AM
+                },
+                new Activity
+                {
+                    ActivityID = 3,
+                    Name = "Makaton Communication",
+                    Description = "A chance for our memebers to learn some " +
+                    "makaton sign lanaguage from our trained staff team.",
+                    Day = DayOptions.WEDNESAY,
+                    Time = TimeOptions.AM
+                },
+                new Activity
+                {
+                    ActivityID = 4,
+                    Name = "Baking",
+                    Description = "With a slightly more sweeter emphasis, " +
+                    "our baking session allowing members to craft some classic " +
+                    "baking recipes including many different kinds of cakes and buscuits.",
+                    Day = DayOptions.THURSDAY,
+                    Time = TimeOptions.AM
+                },
+                new Activity
+                {
+                    ActivityID = 5,
+                    Name = "Personal Shopping",
+                    Description = "A chance for our members to go out" +
+                    "into town to indulge in some retail therapy that " +
+                    "they may wish to do. Afterwards, we'll always " +
+                    "stop for a coffee somewhere.",
+                    Day = DayOptions.FRIDAY,
+                    Time = TimeOptions.AM
+                },
+                //6-10 are Mon - Fri PM activities
+                new Activity
+                {
+                    ActivityID = 6,
+                    Name = "Music Making",
+                    Description = "A chance for members to flex their " +
+                    "creative muscles with a musical session. We have some " +
+                    "musically inclined staff members and selection of instuments " +
+                    "from Keyboards and Guitars to Tin Whistles.",
+                    Day = DayOptions.MONDAY,
+                    Time = TimeOptions.PM
+                },
+                new Activity
+                {
+                    ActivityID = 7,
+                    Name = "Healthy Eating",
+                    Description = "A cooking session with an " +
+                    "emphasis on healthy ingredients and healthy " +
+                    "recipes.",
+                    Day = DayOptions.TUESDAY,
+                    Time = TimeOptions.PM
+                },
+                new Activity
+                {
+                    ActivityID = 8,
+                    Name = "Pub Trip",
+                    Description = "For some of us, relaxing in " +
+                    "the pub with friends is a big part of our" +
+                    " social life. We work to enable this for " +
+                    "our members who value this as part of their " +
+                    "lives.",
+                    Day = DayOptions.WEDNESAY,
+                    Time = TimeOptions.PM
+                },
+                new Activity
+                {
+                    ActivityID = 9,
+                    Name = "Social Outing",
+                    Description = "An opportunity to go out " +
+                    "into the town, have a coffee and chat with " +
+                    "people, and generally enjoy the outdoors. ",
+                    Day = DayOptions.THURSDAY,
+                    Time = TimeOptions.PM
+                },
+                new Activity
+                {
+                    ActivityID = 10,
+                    Name = "Relaxation",
+                    Description = "To wind down the week before " +
+                    "the weekend, we hold a relaxation session " +
+                    "where various relaxation techniques like mindfulness " +
+                    "are practiced to promote staying in the here and now.",
+                    Day = DayOptions.FRIDAY,
+                    Time = TimeOptions.PM
+                }
             };
+            ActivityList.ForEach(s => context.Activities.AddOrUpdate(p => p.ActivityID, s));
         }
 
         private void SeedAddress(ValeDbContext context)
@@ -67,7 +174,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Address
                 {
                     AddressID = 4,
-                    House = "43",
+                    House = "23",
                     StreetName = "Potters Way",
                     TownName = "Chesham",
                     Postcode = "HP236LV",
@@ -126,10 +233,45 @@ namespace ValeActivitiesCentre.Migrations
                     TownName = "Towton",
                     Postcode = "AL4 E61",
                     County = Counties.BEDFORDSHIRE
-                }               
-
+                },
+                new Address
+                {
+                    AddressID = 11,
+                    House = "4",
+                    StreetName = "Stables Road",
+                    TownName = "Forgeton",
+                    Postcode = "HP01 9SK",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 12,
+                    House = "19",
+                    StreetName = "Sun Close",
+                    TownName = "Watermill",
+                    Postcode = "HP5 7JW",
+                    County = Counties.HERTFORDSHIRE
+                },
+                new Address
+                {
+                    AddressID = 13,
+                    House = "6",
+                    StreetName = "Ashlyns Road",
+                    TownName = "Berkhamsted",
+                    Postcode = "HP4 1AB",
+                    County = Counties.BUCKINGHAMSHIRE
+                },
+                new Address
+                {
+                    AddressID = 14,
+                    House = "4",
+                    StreetName = "Skyforger Street",
+                    TownName = "Tiurada",
+                    Postcode = "HP28 1AC",
+                    County = Counties.BUCKINGHAMSHIRE
+                }
             };
-            
+            AddressList.ForEach(s => context.Addresses.AddOrUpdate(p => p.AddressID, s));
         }
 
         private void SeedPeople(ValeDbContext context)
