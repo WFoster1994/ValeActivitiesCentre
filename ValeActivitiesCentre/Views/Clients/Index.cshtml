@@ -1,13 +1,16 @@
 ﻿@model IEnumerable<ValeActivitiesCentre.Models.Client>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Client Details";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>@ViewBag.Title</h3>
+</div>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Client Details", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +44,9 @@
             @Html.DisplayFor(modelItem => item.Funding)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClientID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ClientID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClientID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClientID }, new { @class = "btn btn-success" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.ClientID }, new { @class = "btn btn-info"}) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClientID}, new { @class = "btn btn-danger"})
         </td>
     </tr>
 }
