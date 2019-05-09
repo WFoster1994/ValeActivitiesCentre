@@ -327,51 +327,59 @@ namespace ValeActivitiesCentre.Migrations
                 new ClientProfile
                 {
                     ClientProfileID = 8,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "Simple signing and short sentances.",
+                    PoorCoomunicationApproach = "Long or drawn out sentances.",
+                    GoalsAndObjectives = "To become more independent."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 9,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "Full sentances, as you would with anyone else.",
+                    PoorCoomunicationApproach = "Fast speech that would be difficult for most " +
+                    "people to catch. Slowly spoken sentances that could be seen as patronising.",
+                    GoalsAndObjectives = "Find a meaningful job."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 10,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "A set of signs that are unique and understood " +
+                    "by myself. Short, often, two word phrases also work for me.",
+                    PoorCoomunicationApproach = "Excessive spoken communication " +
+                    "all at one time does not work for me. This can be overly stimulating.",
+                    GoalsAndObjectives = "To be happy and see other people more often."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 11,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "Full and ordinary sentances.",
+                    PoorCoomunicationApproach = "Technical terms that are not generally " +
+                    "used by ordinary people.",
+                    GoalsAndObjectives = "To find a house or flat of my own to live in."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 12,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "Simple signing and short sentances. I also " +
+                    "appreciate these sentances to be clearly spoken.",
+                    PoorCoomunicationApproach = "Long or overly complicated sentances.",
+                    GoalsAndObjectives = "To learn new skills."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 13,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "A set of key words and phrases that are " +
+                    "understood by me.",
+                    PoorCoomunicationApproach = "Long sentances as these are difficult for me " +
+                    "to understand.",
+                    GoalsAndObjectives = "To see and be around people more."
                 },
                 new ClientProfile
                 {
                     ClientProfileID = 14,
-                    BestComunicationApproach = "",
-                    PoorCoomunicationApproach = "",
-                    GoalsAndObjectives = ""
+                    BestComunicationApproach = "Simple signing and short sentances.",
+                    PoorCoomunicationApproach = "Long sentances. I also don't appreciate " +
+                    "these short sentances being spoken in a way that would seem patronising.",
+                    GoalsAndObjectives = "To increase my confidence around other people"
                 }
             };
             ClientProfileList.ForEach(s => context.ClientProfiles.AddOrUpdate(p => p.ClientProfileID, s));
@@ -681,49 +689,58 @@ namespace ValeActivitiesCentre.Migrations
                     StaffID = 1,
                     Department = DepartmentOptions.CARE,
                     JobPosition = JobPositionOptions.ACTIVITIES_ORGANISER,
-                    Profile = ""
+                    Profile = "Lorem ipsum dolor sit amet, " +
+                    "consectetur adipiscing elit, sed do eiusmod tempor " +
+                    "incididunt ut labore et dolore magna aliqua"
                 },
                 new Staff
                 {
                     StaffID = 2,
                     Department = DepartmentOptions.MANAGEMENT,
                     JobPosition = JobPositionOptions.COMPANY_DIRECTOR,
-                    Profile = ""
+                    Profile = "Ea putant torquatos scripserit sea, " +
+                    "ius veri aperiri deleniti te, duo cu quas scripta."
                 },
                 new Staff
                 {
                     StaffID = 3,
                     Department = DepartmentOptions.MANAGEMENT,
                     JobPosition = JobPositionOptions.COMPANY_DIRECTOR,
-                    Profile = ""
+                    Profile = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 },
                 new Staff
                 {
                     StaffID = 4,
                     Department = DepartmentOptions.MANAGEMENT,
                     JobPosition = JobPositionOptions.SITE_MANAGER,
-                    Profile = ""
+                    Profile = "Ut enim ad minim veniam, quis " +
+                    "nostrud exercitation ullamco laboris nisi ut aliquip " +
+                    "ex ea commodo consequat."
                 },
                 new Staff
                 {
                     StaffID = 5,
                     Department = DepartmentOptions.CARE,
                     JobPosition = JobPositionOptions.ACTIVITIES_ORGANISER,
-                    Profile = ""
+                    Profile = "Ea putant torquatos scripserit sea, " +
+                    "ius veri aperiri deleniti te, duo cu quas scripta."
                 },
                 new Staff
                 {
                     StaffID = 6,
                     Department = DepartmentOptions.CARE,
                     JobPosition = JobPositionOptions.SITE_SUPERVISOR,
-                    Profile = ""
+                    Profile = "uis aute irure dolor in reprehenderit " +
+                    "in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                 },
                 new Staff
                 {
                     StaffID = 7,
                     Department = DepartmentOptions.CARE,
                     JobPosition = JobPositionOptions.APPRENTICE,
-                    Profile = ""
+                    Profile = "Ea putant torquatos scripserit sea, " +
+                    "ius veri aperiri deleniti te, duo cu quas scripta."
                 }
             };
             StaffList.ForEach(s => context.Staffs.AddOrUpdate(p => p.StaffID, s));

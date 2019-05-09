@@ -13,7 +13,7 @@ namespace ValeActivitiesCentre.Models
         /// the most effective way of supporting and communicating with the 
         /// client
         /// </summary>
-        [Display(Name ="What works for me")]
+        [Display(Name ="The best communication approach for me")]
         public string BestComunicationApproach { get; set; }
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace ValeActivitiesCentre.Models
         /// what to avoid when supporting the client i.e. what forms of 
         /// communication does not work for them.
         /// </summary>
-        [Display(Name ="What does not work for me")]
+        [Display(Name ="The communication approach that does not work for me")]
         public string PoorCoomunicationApproach { get; set; }
 
         /// <summary>
