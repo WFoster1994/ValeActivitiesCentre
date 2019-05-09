@@ -1,0 +1,50 @@
+﻿@model ValeActivitiesCentre.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientProfile.BestComunicationApproach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientProfile.BestComunicationApproach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskAssessment.PhysicalHealthNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskAssessment.PhysicalHealthNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funding)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClientID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

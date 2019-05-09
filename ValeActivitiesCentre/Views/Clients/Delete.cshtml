@@ -1,0 +1,56 @@
+﻿@model ValeActivitiesCentre.Models.Client
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientProfile.BestComunicationApproach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientProfile.BestComunicationApproach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskAssessment.PhysicalHealthNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RiskAssessment.PhysicalHealthNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Funding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funding)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
