@@ -29,6 +29,8 @@ namespace ValeActivitiesCentre.Models
 
         public virtual ClientProfile ClientProfile { get; set; }
 
+        public virtual RiskAssessment RiskAssessment { get; set; }
+
         public virtual Person Person { get; set; }
     }
 }

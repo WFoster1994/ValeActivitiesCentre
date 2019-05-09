@@ -74,9 +74,11 @@ namespace ValeActivitiesCentre.Models
             get { return FirstName + " " + LastName;  }
         }
 
-        public virtual Staff Staff { get; set; }
+       public Staff Staff { get; set; }
 
-        public virtual Client Client { get; set; }
+        public Client Client { get; set; }
+
+        public virtual Address Address { get; set; }
 
     }
 }

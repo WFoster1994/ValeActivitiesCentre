@@ -29,5 +29,11 @@ namespace ValeActivitiesCentre.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ValeActivitiesCentre.Models.Person> People { get; set; }
+
+        public System.Data.Entity.DbSet<ValeActivitiesCentre.Models.Client> Clients { get; set; }
+
+        public System.Data.Entity.DbSet<ValeActivitiesCentre.Models.Staff> Staffs { get; set; }
     }
 }

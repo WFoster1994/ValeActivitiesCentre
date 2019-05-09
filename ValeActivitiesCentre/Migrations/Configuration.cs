@@ -492,8 +492,8 @@ namespace ValeActivitiesCentre.Migrations
                     MobilePhoneNumber = "0777554321",
                     Email = "Michael@mail.com",
                     DateOfBirth = new System.DateTime(1976, 12, 26),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -504,8 +504,8 @@ namespace ValeActivitiesCentre.Migrations
                     HomePhoneNumber = "01746276354",
                     MobilePhoneNumber = "07497735243",
                     DateOfBirth = new System.DateTime(1994, 2, 28),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -517,8 +517,8 @@ namespace ValeActivitiesCentre.Migrations
                     MobilePhoneNumber = "07945172223",
                     Email = "MaryAnne@mail.com",
                     DateOfBirth = new System.DateTime(1982, 3, 11),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -530,8 +530,8 @@ namespace ValeActivitiesCentre.Migrations
                     MobilePhoneNumber = "07163543210",
                     Email = "Ellie1@mail.com",
                     DateOfBirth = new System.DateTime(1989, 9, 6),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -541,8 +541,8 @@ namespace ValeActivitiesCentre.Migrations
                     LastName = "Adams",
                     MobilePhoneNumber = "07364555231",
                     DateOfBirth = new System.DateTime(1999, 10, 31),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -554,8 +554,8 @@ namespace ValeActivitiesCentre.Migrations
                     MobilePhoneNumber = "07942987365",
                     Email = "Millie1@mail.com",
                     DateOfBirth = new System.DateTime(1966, 11, 16),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 },
                 new Person
@@ -565,8 +565,8 @@ namespace ValeActivitiesCentre.Migrations
                     LastName = "White",
                     HomePhoneNumber = "01832765946",
                     DateOfBirth = new System.DateTime(1968, 9, 17),
-                    IsClient = false,
-                    IsStaff = true,
+                    IsClient = true,
+                    IsStaff = false,
                     ImageURL = ""
                 }
             };

@@ -58,8 +58,7 @@ namespace ValeActivitiesCentre.Models
         /// </summary>
         [Required, StringLength(8)]
         public string Postcode { get; set; }
-
-       
+               
 
         public virtual Person Person { get; set; }
 
