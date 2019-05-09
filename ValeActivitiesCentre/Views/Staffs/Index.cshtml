@@ -1,18 +1,27 @@
 ﻿@model IEnumerable<ValeActivitiesCentre.Models.Staff>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Staff Details";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>@ViewBag.Title</h3>
+</div>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Staff Member", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.StaffID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Person.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Department)
@@ -29,8 +38,14 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.StaffID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Person.FirstName)
         </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.Person.LastName)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Department)
         </td>
@@ -41,9 +56,9 @@
             @Html.DisplayFor(modelItem => item.Profile)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StaffID }, new { @class = "btn btn-success" }) 
-            @Html.ActionLink("Details", "Details", new { id=item.StaffID }, new { @class = "btn btn-info" }) 
-            @Html.ActionLink("Delete", "Delete", new { id=item.StaffID }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Edit", "Edit", new { id = item.StaffID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "Details", new { id = item.StaffID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.StaffID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
