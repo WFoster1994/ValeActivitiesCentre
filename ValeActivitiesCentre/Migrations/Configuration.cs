@@ -27,6 +27,7 @@ namespace ValeActivitiesCentre.Migrations
             SeedClientProfiles(context);
             SeedPeople(context);
             SeedStaff(context);
+            SeedRiskAssessments(context);
         }
 
         //Seed methods displayed in alphabetical order

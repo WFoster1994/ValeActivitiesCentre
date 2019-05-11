@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ValeActivitiesCentre.Models.Activity>
+
+@{
+    ViewBag.Title = "Our Activities";
+}
+
+<div class="jumbotron">
+    <h2>Vale Activities Centre</h2>
+    <h3>@ViewBag.Title</h3>
+</div>
+
+@foreach (var activity in Model)
+{
+    <h2>@activity.Name</h2>
+    <p>@activity.Description</p>
+    <a href=" ~/Activities/ActivityDetails/@activity.ActivityID">
+       Learn More
+    </a>
+
+}
+
