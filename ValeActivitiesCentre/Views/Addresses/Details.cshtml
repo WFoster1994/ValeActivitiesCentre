@@ -4,7 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>Address Details for @Model.Person.FullName</h3>
+</div>
 
 <div>
     <h4>Address</h4>
@@ -62,5 +65,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.AddressID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Address List", "Index")
 </p>

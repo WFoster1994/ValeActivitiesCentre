@@ -4,11 +4,13 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to delete @Model.Person.FullName from the staff records?</h3>
 <div>
-    <h4>Staff</h4>
+    <h4>@Model.Person.FullName</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -50,7 +52,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to Staff List", "Index")
         </div>
     }
 </div>

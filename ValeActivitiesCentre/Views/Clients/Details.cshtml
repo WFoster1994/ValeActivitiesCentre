@@ -4,18 +4,21 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>Address Details for @Model.Person.FullName</h3>
+</div>
 
 <div>
-    <h4>Client</h4>
+    <h4>@Model.Person.FullName</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ClientProfile.BestComunicationApproach)
+            @Html.DisplayNameFor(model => model.ClientID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ClientProfile.BestComunicationApproach)
+            @Html.DisplayFor(model => model.ClientID)
         </dd>
 
         <dt>
@@ -27,11 +30,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RiskAssessment.PhysicalHealthNotes)
+            @Html.DisplayNameFor(model => model.Person.LastName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RiskAssessment.PhysicalHealthNotes)
+            @Html.DisplayFor(model => model.Person.LastName)
         </dd>
 
         <dt>
@@ -46,5 +49,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ClientID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Clients List", "Index")
 </p>

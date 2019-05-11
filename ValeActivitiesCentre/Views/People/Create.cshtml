@@ -4,7 +4,10 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>@ViewBag.Title</h3>
+</div>
 
 @using (Html.BeginForm()) 
 {
@@ -99,5 +102,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to People List", "Index")
 </div>

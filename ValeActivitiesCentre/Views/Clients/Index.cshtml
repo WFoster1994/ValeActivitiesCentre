@@ -10,18 +10,18 @@
 </div>
 
 <p>
-    @Html.ActionLink("Add New Client Details", "Create")
+    @Html.ActionLink("Add New Client", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ClientProfile.BestComunicationApproach)
+            @Html.DisplayNameFor(model => model.ClientID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Person.FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RiskAssessment.PhysicalHealthNotes)
+            @Html.DisplayNameFor(model => model.Person.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Funding)
@@ -32,13 +32,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ClientProfile.BestComunicationApproach)
+            @Html.DisplayFor(ModelItem =>item.ClientID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Person.FirstName)
+            @Html.DisplayFor(ModelItem => item.Person.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RiskAssessment.PhysicalHealthNotes)
+            @Html.DisplayFor(ModelItem => item.Person.LastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Funding)

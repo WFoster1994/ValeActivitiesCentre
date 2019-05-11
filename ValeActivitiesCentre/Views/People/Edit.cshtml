@@ -4,7 +4,10 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>Editing Personal Details for @Model.FullName</h3>
+</div>
 
 @using (Html.BeginForm())
 {
@@ -101,5 +104,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to People List", "Index")
 </div>

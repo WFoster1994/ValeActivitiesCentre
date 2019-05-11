@@ -1,10 +1,13 @@
 ﻿@model ValeActivitiesCentre.Models.Staff
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Add a New Staff Member";
 }
 
-<h2>Create</h2>
+<div class="jumbotron">
+    <h2>Vale Activities Centre - Staff Portal</h2>
+    <h3>@ViewBag.Title</h3>
+</div>
 
 @using (Html.BeginForm()) 
 {
@@ -17,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StaffID, "StaffID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("StaffID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.EditorFor(model => model.StaffID, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.StaffID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -55,5 +58,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Staff List", "Index")
 </div>
