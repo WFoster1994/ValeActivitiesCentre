@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<ValeActivitiesCentre.Models.Staff>
+@using ValeActivitiesCentre.Models
 
 @{
     ViewBag.Title = "Our Staff Team";
@@ -13,13 +14,15 @@
 {
     <section class="row">
         <section class="col-lg-6">
-
-
+            <h2>@staff.Person.FullName</h2>
+            <p>@staff.Profile</p>
+            <br /> <br />
         </section>
 
         <section class="col-lg-6">
-
-
+            <br />
+            <p><img src="~/Images/Staff/@staff.Person.ImageURL" alt="Photo of @staff.Person.FirstName" width="70" height="70" /></p>
+            <br /><br /><br />
         </section>
 
     </section>

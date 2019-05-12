@@ -37,6 +37,11 @@ namespace ValeActivitiesCentre.Controllers
             return View(staff);
         }
 
+        public ActionResult StaffTeam()
+        {
+            return View(db.Staffs.ToList());
+        }
+
         // GET: Staffs/Create
         public ActionResult Create()
         {

@@ -10,7 +10,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Add New Staff Member", "Create")
+    @Html.ActionLink("Add New Staff Member", "Create", null, new { @class = "btn btn-primary"})
 </p>
 <table class="table">
     <tr>
@@ -58,7 +58,7 @@
             @Html.DisplayFor(modelItem => item.Profile)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Person.ImageURL)
+            <img src="~/Images/Staff/@Html.DisplayFor(modelItem => item.Person.ImageURL)" alt="Photo of Staff Member" width="70" height="70" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.StaffID }, new { @class = "btn btn-success" })

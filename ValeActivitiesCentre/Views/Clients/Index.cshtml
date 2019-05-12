@@ -9,7 +9,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Add New Client", "Create")
+    @Html.ActionLink("Add New Client", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -46,7 +46,7 @@
                 @Html.DisplayFor(modelItem => item.Funding)
             </td>
             <td>
-                <img src="~/Images/Clients/@Html.DisplayFor(modelItem => item.Person.ImageURL)" alt="Photo of staff" width="70" height="70"/>
+                <img src="~/Images/Clients/@Html.DisplayFor(modelItem => item.Person.ImageURL)" alt="Photo of Client" width="70" height="70"/>
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ClientID }, new { @class = "btn btn-success" })
