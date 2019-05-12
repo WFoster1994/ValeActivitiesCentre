@@ -452,7 +452,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1990, 7, 11),
                     IsClient = false,
                     IsStaff = true,
-                    ImageURL = "HGavatar.JPG"
+                    ImageURL = "HBavatar.JPG"
                 },
                 new Person
                 {
@@ -465,7 +465,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1992, 11, 12),
                     IsClient = false,
                     IsStaff = true,
-                    ImageURL = ""
+                    ImageURL = "JFavatar.JPG"
                 },
                 new Person
                 {
@@ -478,7 +478,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1981, 12, 29),
                     IsClient = false,
                     IsStaff = true,
-                    ImageURL = ""
+                    ImageURL = "SEavatar.JPG"
                 },
                 new Person
                 {
@@ -491,7 +491,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1990, 4, 23),
                     IsClient = false,
                     IsStaff = true,
-                    ImageURL = ""
+                    ImageURL = "ASavatar.JPG"
                 },
                 //Client List Begins
                 new Person
@@ -505,7 +505,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1976, 12, 26),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "MBavatar.JPG"
                 },
                 new Person
                 {
@@ -517,7 +517,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1994, 2, 28),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "SGavatar.JPG"
                 },
                 new Person
                 {
@@ -530,7 +530,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1982, 3, 11),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "MPavatar.JPG"
                 },
                 new Person
                 {
@@ -543,7 +543,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1989, 9, 6),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "ESavatar.JPG"
                 },
                 new Person
                 {
@@ -554,7 +554,7 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1999, 10, 31),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "TAavatar.JPG"
                 },
                 new Person
                 {
@@ -567,18 +567,18 @@ namespace ValeActivitiesCentre.Migrations
                     DateOfBirth = new System.DateTime(1966, 11, 16),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "MRavatar.JPG"
                 },
                 new Person
                 {
                     PersonID = 14,
                     FirstName = "Oliver",
-                    LastName = "White",
+                    LastName = "Eames",
                     HomePhoneNumber = "01832765946",
                     DateOfBirth = new System.DateTime(1968, 9, 17),
                     IsClient = true,
                     IsStaff = false,
-                    ImageURL = ""
+                    ImageURL = "OEavatar.JPG"
                 }
             };
             PersonList.ForEach(s => context.People.AddOrUpdate(p => p.PersonID, s));

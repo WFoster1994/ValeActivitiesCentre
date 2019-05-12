@@ -26,6 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Funding)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.ImageURL)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -41,6 +44,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Funding)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.ImageURL)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ClientID }, new { @class = "btn btn-success" }) 

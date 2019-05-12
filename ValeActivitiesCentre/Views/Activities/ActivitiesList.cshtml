@@ -11,12 +11,21 @@
 
 @foreach (var activity in Model)
 {
-    <h2>@activity.Name</h2>
-    <p>@activity.Description</p>
-    <p><img src="~/Images/Staff/@activity.ImageURL" alt="Photo of @activity.Name" /></p>
-    <a href=" ~/Activities/ActivityDetails/@activity.ActivityID">
-       Learn More
-    </a>
+    <section class="row">
+        <section class="col-lg-6">
+            <h2>@activity.Name</h2>
+            <p>@activity.Description</p>
+            <br /> <br />
+        </section>
 
+        <section class="col-lg-6">
+            <p><img src="~/Images/Activities/@activity.ImageURL" alt="Photo of @activity.Name" width="200" height="200" /></p>
+            <a href=" ~/Activities/ActivityDetails/@activity.ActivityID">
+                Learn More
+            </a>
+            <br /><br /><br />
+        </section>
+       
+    </section>
 }
 

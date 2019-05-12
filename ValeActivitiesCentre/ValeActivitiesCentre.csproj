@@ -250,6 +250,19 @@
     <Content Include="Images\Activities\Music.jpg" />
     <Content Include="Images\Activities\PersonalShopping.jpg" />
     <Content Include="Images\Activities\SocialOuting.jpg" />
+    <Content Include="Images\Clients\ESavatar.JPG" />
+    <Content Include="Images\Clients\MBavatar.JPG" />
+    <Content Include="Images\Clients\MPavatar.JPG" />
+    <Content Include="Images\Clients\MRavatar.JPG" />
+    <Content Include="Images\Clients\OEavatar.JPG" />
+    <Content Include="Images\Clients\SGavatar.JPG" />
+    <Content Include="Images\Clients\TAavatar.JPG" />
+    <Content Include="Images\Staff\ASavatar.JPG" />
+    <Content Include="Images\Staff\BDavatar.JPG" />
+    <Content Include="Images\Staff\HBavatar.JPG" />
+    <Content Include="Images\Staff\JFavatar.JPG" />
+    <Content Include="Images\Staff\KSavatar.JPG" />
+    <Content Include="Images\Staff\SEavatar.JPG" />
     <Content Include="Images\Staff\WFavatar.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -335,6 +348,7 @@
     <Content Include="Views\Activities\_ViewStart.cshtml" />
     <Content Include="Views\Activities\ActivityDetails.cshtml" />
     <Content Include="Views\Activities\ActivitiesList.cshtml" />
+    <Content Include="Views\Staffs\StaffTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
