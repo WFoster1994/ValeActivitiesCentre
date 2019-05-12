@@ -210,6 +210,14 @@
     <Compile Include="Migrations\201905091012194_InitialCreate.Designer.cs">
       <DependentUpon>201905091012194_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905121324074_ActivityImage.cs" />
+    <Compile Include="Migrations\201905121324074_ActivityImage.Designer.cs">
+      <DependentUpon>201905121324074_ActivityImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905121412117_ValidationCheck.cs" />
+    <Compile Include="Migrations\201905121412117_ValidationCheck.Designer.cs">
+      <DependentUpon>201905121412117_ValidationCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -233,6 +241,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Activities\Allotment.jpg" />
+    <Content Include="Images\Activities\Baking.jpg" />
+    <Content Include="Images\Activities\HealthyEating.jpg" />
+    <Content Include="Images\Activities\HobbiesGames.jpg" />
+    <Content Include="Images\Activities\Makaton.png" />
+    <Content Include="Images\Activities\Mindfulness.jpg" />
+    <Content Include="Images\Activities\Music.jpg" />
+    <Content Include="Images\Activities\PersonalShopping.jpg" />
+    <Content Include="Images\Activities\SocialOuting.jpg" />
     <Content Include="Images\Staff\WFavatar.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -338,6 +355,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905091012194_InitialCreate.resx">
       <DependentUpon>201905091012194_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905121324074_ActivityImage.resx">
+      <DependentUpon>201905121324074_ActivityImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905121412117_ValidationCheck.resx">
+      <DependentUpon>201905121412117_ValidationCheck.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

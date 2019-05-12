@@ -44,7 +44,8 @@ namespace ValeActivitiesCentre.Migrations
                     "to get out into the town for a drink and to " +
                     "chat with other members and staff.",
                     Day = DayOptions.MONDAY,
-                    Time = TimeOptions.AM
+                    Time = TimeOptions.AM,
+                    ImageURL = "SocialOuting.jpg"
                 },
                 new Activity
                 {
@@ -53,7 +54,8 @@ namespace ValeActivitiesCentre.Migrations
                     Description = "A relaxed session for our members who " +
                     "prefer to stay in ",
                     Day = DayOptions.TUESDAY,
-                    Time = TimeOptions.AM
+                    Time = TimeOptions.AM,
+                    ImageURL = "HobbiesGames.jpg"
                 },
                 new Activity
                 {
@@ -62,7 +64,8 @@ namespace ValeActivitiesCentre.Migrations
                     Description = "A chance for our memebers to learn some " +
                     "makaton sign lanaguage from our trained staff team.",
                     Day = DayOptions.WEDNESAY,
-                    Time = TimeOptions.AM
+                    Time = TimeOptions.AM,
+                    ImageURL = "Makaton.png"
                 },
                 new Activity
                 {
@@ -72,7 +75,8 @@ namespace ValeActivitiesCentre.Migrations
                     "our baking session allowing members to craft some classic " +
                     "baking recipes including many different kinds of cakes and buscuits.",
                     Day = DayOptions.THURSDAY,
-                    Time = TimeOptions.AM
+                    Time = TimeOptions.AM,
+                    ImageURL = "Baking.jpg"
                 },
                 new Activity
                 {
@@ -83,7 +87,8 @@ namespace ValeActivitiesCentre.Migrations
                     "they may wish to do. Afterwards, we'll always " +
                     "stop for a coffee somewhere.",
                     Day = DayOptions.FRIDAY,
-                    Time = TimeOptions.AM
+                    Time = TimeOptions.AM,
+                    ImageURL = "PersonalShopping.jpg"
                 },
                 //6-10 are Mon - Fri PM activities
                 new Activity
@@ -95,7 +100,8 @@ namespace ValeActivitiesCentre.Migrations
                     "musically inclined staff members and selection of instuments " +
                     "from Keyboards and Guitars to Tin Whistles.",
                     Day = DayOptions.MONDAY,
-                    Time = TimeOptions.PM
+                    Time = TimeOptions.PM,
+                    ImageURL = "Music.jpg"
                 },
                 new Activity
                 {
@@ -105,19 +111,21 @@ namespace ValeActivitiesCentre.Migrations
                     "emphasis on healthy ingredients and healthy " +
                     "recipes.",
                     Day = DayOptions.TUESDAY,
-                    Time = TimeOptions.PM
+                    Time = TimeOptions.PM,
+                    ImageURL = "HealthyEating.jpg"
                 },
                 new Activity
                 {
                     ActivityID = 8,
-                    Name = "Pub Trip",
-                    Description = "For some of us, relaxing in " +
-                    "the pub with friends is a big part of our" +
-                    " social life. We work to enable this for " +
-                    "our members who value this as part of their " +
-                    "lives.",
+                    Name = "Allotment Care",
+                    Description = "We have our own " +
+                    "allotment a few minutes walk from the " +
+                    "site, where our members have the chance " +
+                    "to get involved with the growing " +
+                    "and reaping of fresh vegetables.",
                     Day = DayOptions.WEDNESAY,
-                    Time = TimeOptions.PM
+                    Time = TimeOptions.PM,
+                    ImageURL = "Allotment.jpg"
                 },
                 new Activity
                 {
@@ -127,7 +135,8 @@ namespace ValeActivitiesCentre.Migrations
                     "into the town, have a coffee and chat with " +
                     "people, and generally enjoy the outdoors. ",
                     Day = DayOptions.THURSDAY,
-                    Time = TimeOptions.PM
+                    Time = TimeOptions.PM,
+                    ImageURL = "SocialOuting.jpg"
                 },
                 new Activity
                 {
@@ -138,7 +147,8 @@ namespace ValeActivitiesCentre.Migrations
                     "where various relaxation techniques like mindfulness " +
                     "are practiced to promote staying in the here and now.",
                     Day = DayOptions.FRIDAY,
-                    Time = TimeOptions.PM
+                    Time = TimeOptions.PM,
+                    ImageURL = "Mindfulness.jpg"
                 }
             };
             ActivityList.ForEach(s => context.Activities.AddOrUpdate(p => p.ActivityID, s));

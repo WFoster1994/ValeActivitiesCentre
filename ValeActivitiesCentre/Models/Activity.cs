@@ -66,6 +66,11 @@ namespace ValeActivitiesCentre.Models
         [Required, Display(Name ="Activity Time Slot")]
         public TimeOptions Time { get; set; }
 
+        /// <summary>
+        /// An image of the activity concerned.
+        /// </summary>
+        public string ImageURL { get; set; }
+
         public virtual ICollection<Person> People { get; set; }
     }
 }
