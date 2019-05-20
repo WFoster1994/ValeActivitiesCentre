@@ -34,30 +34,7 @@ namespace ValeActivitiesCentre.Controllers
                 return HttpNotFound();
             }
             return View(activity);
-        }
-
-        public ActionResult ActivitiesList()
-        {
-            return View(db.Activities.ToList());
-                
-        }
-
-        public ActionResult ActivityDetails(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            Activity Activity = db.Activities.Find(id);
-
-            if (Activity == null)
-            {
-                return HttpNotFound();
-            }
-
-            return View(Activity);
-        }
+        }        
 
         // GET: Activities/Create
         public ActionResult Create()

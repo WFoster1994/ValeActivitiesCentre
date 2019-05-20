@@ -346,9 +346,9 @@
     <Content Include="Views\Clients\_ViewStart.cshtml" />
     <Content Include="Views\Addresses\_ViewStart.cshtml" />
     <Content Include="Views\Activities\_ViewStart.cshtml" />
-    <Content Include="Views\Activities\ActivityDetails.cshtml" />
-    <Content Include="Views\Activities\ActivitiesList.cshtml" />
-    <Content Include="Views\Staffs\StaffTeam.cshtml" />
+    <Content Include="Views\Home\ActivityDetails.cshtml" />
+    <Content Include="Views\Home\ActivitiesList.cshtml" />
+    <Content Include="Views\Home\StaffTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
