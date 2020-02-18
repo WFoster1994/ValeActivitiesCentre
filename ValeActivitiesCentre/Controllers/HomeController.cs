@@ -30,22 +30,7 @@ namespace ValeActivitiesCentre.Controllers
             return View(db.Activities.ToList());
         }
 
-        public ActionResult ActivityDetails(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            Activity Activity = db.Activities.Find(id);
-
-            if (Activity == null)
-            {
-                return HttpNotFound();
-            }
-
-            return View(Activity);
-        }
+        
 
         public ActionResult About()
         {

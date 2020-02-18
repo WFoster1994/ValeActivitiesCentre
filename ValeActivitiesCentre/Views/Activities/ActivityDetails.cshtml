@@ -1,0 +1,42 @@
+﻿@model ValeActivitiesCentre.Models.Activity
+@using ValeActivitiesCentre.Models
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Activity Details";
+}
+
+<div class="jumbotron">
+    <h2>Vale Activities Centre</h2>
+    <h3>@Model.Name: All You Need to Know</h3>
+</div>
+
+<section class="row">
+    <section class="col-lg-4">
+        <h2>@Model.Name</h2>
+        <p>@Model.Description</p>
+        <br /> <br />
+    </section>
+
+    <section class="col-lg-4">
+        <br /><br /><br />
+        <p>@Model.Day @Model.Time</p>
+        <p></p>
+        <br /> <br />
+    </section>
+</section>
+<br />
+
+  <section class="row">
+      <left>
+          @Html.ActionLink("Back", "ActivitiesList", "Home", new { id = Model.ActivityID }, new { @class = "btn btn-success" })
+      </left>
+      <right>
+          @Html.ActionLink("Book Activity", "BookActivity", "Activities", new { @class = "btn btn-success" })
+      </right>
+  </section>
+           
+
+

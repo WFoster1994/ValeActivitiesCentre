@@ -347,7 +347,7 @@
     <Content Include="Views\Clients\_ViewStart.cshtml" />
     <Content Include="Views\Addresses\_ViewStart.cshtml" />
     <Content Include="Views\Activities\_ViewStart.cshtml" />
-    <Content Include="Views\Home\ActivityDetails.cshtml" />
+    <Content Include="Views\Activities\ActivityDetails.cshtml" />
     <Content Include="Views\Home\ActivitiesList.cshtml" />
     <Content Include="Views\Home\StaffTeam.cshtml" />
   </ItemGroup>
