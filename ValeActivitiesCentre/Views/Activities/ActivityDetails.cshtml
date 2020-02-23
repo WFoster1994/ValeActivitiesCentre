@@ -34,8 +34,8 @@
           @Html.ActionLink("Back", "ActivitiesList", "Home", new { id = Model.ActivityID }, new { @class = "btn btn-success" })
       </left>
       <right>
-          @Html.ActionLink("Book Activity", "BookActivity", "Activities", new { @class = "btn btn-success" })
-      </right>
+         @Html.ActionLink("Book Activity", "BookActivity", "Activities", new { id = Model.ActivityID }, new { @class = "btn btn-success" })
+      </right>      
   </section>
            
 

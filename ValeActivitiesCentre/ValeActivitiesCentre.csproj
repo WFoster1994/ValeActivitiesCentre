@@ -350,6 +350,7 @@
     <Content Include="Views\Activities\ActivityDetails.cshtml" />
     <Content Include="Views\Home\ActivitiesList.cshtml" />
     <Content Include="Views\Home\StaffTeam.cshtml" />
+    <Content Include="Views\Activities\BookActivity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
