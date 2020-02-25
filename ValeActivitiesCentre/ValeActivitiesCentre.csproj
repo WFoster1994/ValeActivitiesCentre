@@ -251,6 +251,7 @@
     <Content Include="Images\Activities\Music.jpg" />
     <Content Include="Images\Activities\PersonalShopping.jpg" />
     <Content Include="Images\Activities\SocialOuting.jpg" />
+    <Content Include="Images\Activities\Tick.png" />
     <Content Include="Images\Clients\ESavatar.JPG" />
     <Content Include="Images\Clients\MBavatar.JPG" />
     <Content Include="Images\Clients\MPavatar.JPG" />
