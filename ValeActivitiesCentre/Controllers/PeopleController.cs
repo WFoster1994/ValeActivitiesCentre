@@ -23,6 +23,7 @@ namespace ValeActivitiesCentre.Controllers
         }
 
         // GET: People/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
