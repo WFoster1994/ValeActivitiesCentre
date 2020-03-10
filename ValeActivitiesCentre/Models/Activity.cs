@@ -29,6 +29,17 @@ namespace ValeActivitiesCentre.Models
         PM     
     }
 
+    public enum ActivityStatus
+    {
+        [Display(Name ="Available")]
+        AVAILABLE,
+        [Display(Name ="Limited")]
+        LIMITED,
+        [Display(Name ="Full")]
+        FULL
+
+    }
+
     public class Activity
     {
         /// <summary>
@@ -67,10 +78,18 @@ namespace ValeActivitiesCentre.Models
         public TimeOptions Time { get; set; }
 
         /// <summary>
+        /// The status of the activity in terms of its
+        /// availability to clients. 
+        /// </summary>
+        public ActivityStatus ActivityStatus { get; set; }
+
+        /// <summary>
         /// An image of the activity concerned.
         /// </summary>
         public string ImageURL { get; set; }
 
-        public virtual ICollection<Person> People { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
+
+        public virtual ICollection<Booking> Bookings { get; set; }
     }
 }
