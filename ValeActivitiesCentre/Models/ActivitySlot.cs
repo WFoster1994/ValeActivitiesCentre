@@ -10,6 +10,11 @@ namespace ValeActivitiesCentre.Models
         //Identity number assigned to each activty slot
         public int ActivitySlotID { get; set; }
 
+        /// <summary>
+        /// The activity slot number that will be viewable 
+        /// on the booking system for the client to see.
+        /// </summary>
+        public int ActivitySlotNUmber { get; set; }
 
         //Each activity slot is assigned to an activity 
         public Nullable<int> ActivityID { get; set; }
