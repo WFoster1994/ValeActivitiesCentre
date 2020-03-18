@@ -28,6 +28,7 @@ namespace ValeActivitiesCentre.Migrations
             SeedPeople(context);
             SeedStaff(context);
             SeedRiskAssessments(context);
+            SeedActivitySlots(context);
         }
 
         //Seed methods displayed in alphabetical order
@@ -152,6 +153,37 @@ namespace ValeActivitiesCentre.Migrations
                 }
             };
             ActivityList.ForEach(s => context.Activities.AddOrUpdate(p => p.ActivityID, s));
+        }
+
+        private void SeedActivitySlots(ValeDbContext context)
+        {
+            var ActivitySlotList = new List<ActivitySlot>
+            {
+                new ActivitySlot
+                {
+                    ActivitySlotID = 1
+                },
+                new ActivitySlot
+                {
+                    ActivitySlotID = 2
+                },
+                new ActivitySlot
+                {
+                    ActivitySlotID = 3
+                },
+                new ActivitySlot
+                {
+                    ActivitySlotID = 4
+                },
+                new ActivitySlot
+                {
+                    ActivitySlotID = 5
+                },
+                new ActivitySlot
+                {
+                    ActivitySlotID = 6
+                }
+            };
         }
 
         private void SeedAddresses(ValeDbContext context)

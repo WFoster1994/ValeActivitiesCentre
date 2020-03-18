@@ -88,7 +88,7 @@ namespace ValeActivitiesCentre.Models
         /// </summary>
         public string ImageURL { get; set; }
 
-        public virtual ICollection<Client> Clients { get; set; }
+        public virtual ICollection<ActivitySlot> ActivitySlots { get; set; }
 
         public virtual ICollection<Booking> Bookings { get; set; }
     }

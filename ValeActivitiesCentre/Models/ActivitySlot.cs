@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -17,7 +18,7 @@ namespace ValeActivitiesCentre.Models
         public int ActivitySlotNUmber { get; set; }
 
         //Each activity slot is assigned to an activity 
-        public Nullable<int> ActivityID { get; set; }
+        public int ActivityID { get; set; }
         public virtual Activity Activity { get; set; }
 
         //Each activity slot is booked by a client

@@ -20,7 +20,9 @@ namespace ValeActivitiesCentre.Models
 
     public class Booking
     {
-        [ForeignKey("Client")]
+        /// <summary>
+        /// An identification number assigned to each booking
+        /// </summary>
         public int BookingID {get; set;}
 
         //The status of the booking in terms of the client's request.
@@ -32,17 +34,13 @@ namespace ValeActivitiesCentre.Models
         /// </summary>
         public bool EmailSent { get; set;}
 
-        //Each booking is made by a client
         public int ClientID { get; set; }
+
+        //Each booking is made by a client
         public virtual Client Client { get; set; }
 
         //Each booking is for an activity
-        public int ActivityID { get; set; }
-        public virtual Activity Activity { get; set; }
-
-        //Each booking take an activity slot.
-        public int ActivitySlotID { get; set; }
-        public virtual ActivitySlot ActivitySlot { get; set; }
+        public virtual ICollection<Activity> Activities { get; set; }
 
 
 

@@ -15,6 +15,10 @@ namespace ValeActivitiesCentre.DAL
 
         public DbSet<Activity> Activities { get; set; }
 
+        public DbSet<ActivitySlot> ActivitySlots { get; set; }
+
+        public DbSet<Booking> Bookings { get; set; }
+
         public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Client> Clients { get; set; }

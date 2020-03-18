@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201905121412117_ValidationCheck.Designer.cs">
       <DependentUpon>201905121412117_ValidationCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003181032235_BookingMigration1.cs" />
+    <Compile Include="Migrations\202003181032235_BookingMigration1.designer.cs">
+      <DependentUpon>202003181032235_BookingMigration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -380,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905121412117_ValidationCheck.resx">
       <DependentUpon>201905121412117_ValidationCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003181032235_BookingMigration1.resx">
+      <DependentUpon>202003181032235_BookingMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
