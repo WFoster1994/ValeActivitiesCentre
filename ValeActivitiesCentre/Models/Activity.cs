@@ -52,7 +52,7 @@ namespace ValeActivitiesCentre.Models
         /// or social trip.
         /// </summary>
         [Required, StringLength(30)]
-        public string Name { get; set; }
+        public string ActivityName { get; set; }
 
         /// <summary>
         /// A short descripiton of the activity in 

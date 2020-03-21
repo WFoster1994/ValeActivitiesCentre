@@ -15,14 +15,14 @@ namespace ValeActivitiesCentre.Models
         /// The activity slot number that will be viewable 
         /// on the booking system for the client to see.
         /// </summary>
-        public int ActivitySlotNUmber { get; set; }
+        public int ActivitySlotNumber { get; set; }
 
         //Each activity slot is assigned to an activity 
-        public int ActivityID { get; set; }
+        //public int ActivityID { get; set; }
         public virtual Activity Activity { get; set; }
 
         //Each activity slot is booked by a client
-        public Nullable<int> ClientID { get; set; }
+        //public Nullable<int> ClientID { get; set; }
         public virtual Client Client { get; set; }
 
     }

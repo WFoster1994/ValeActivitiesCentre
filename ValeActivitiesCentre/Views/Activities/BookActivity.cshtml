@@ -1,13 +1,58 @@
-﻿@model ValeActivitiesCentre.Models.Activity
+﻿@model ValeActivitiesCentre.Models.Booking
+
 @{
-    ViewBag.Title = "Book Activity";
+    ViewBag.Title = "BookActivity";
 }
 
-<div class="jumbotron">
-    <h2>Vale Activities Centre</h2>
-    <h3>@ViewBag.Title: Booking Confirmation</h3>
+<h2>BookActivity</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Booking</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.BookingStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.BookingStatus, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BookingStatus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmailSent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.EmailSent)
+                    @Html.ValidationMessageFor(model => model.EmailSent, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClientID, "ClientID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ClientID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ClientID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
-<h3>Thank you for booking your place for @Model.Name on @Model.Day @Model.Time</h3>
-<p><img src="~/Images/Activities/Tick.png" alt="@ViewBag.Title" width="200" height="100"/></p>
-
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

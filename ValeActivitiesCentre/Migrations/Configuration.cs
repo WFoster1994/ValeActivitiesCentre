@@ -40,7 +40,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 1,
-                    Name = "Social Outing",
+                    ActivityName = "Social Outing",
                     Description = "An opportunity for members " +
                     "to get out into the town for a drink and to " +
                     "chat with other members and staff.",
@@ -51,7 +51,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 2,
-                    Name = "Hobbies and Games",
+                    ActivityName = "Hobbies and Games",
                     Description = "A relaxed session for our members who " +
                     "prefer to stay in ",
                     Day = DayOptions.TUESDAY,
@@ -61,7 +61,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 3,
-                    Name = "Makaton Communication",
+                    ActivityName = "Makaton Communication",
                     Description = "A chance for our memebers to learn some " +
                     "makaton sign lanaguage from our trained staff team.",
                     Day = DayOptions.WEDNESAY,
@@ -71,7 +71,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 4,
-                    Name = "Baking",
+                    ActivityName = "Baking",
                     Description = "With a slightly more sweeter emphasis, " +
                     "our baking session allowing members to craft some classic " +
                     "baking recipes including many different kinds of cakes and buscuits.",
@@ -82,7 +82,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 5,
-                    Name = "Personal Shopping",
+                    ActivityName = "Personal Shopping",
                     Description = "A chance for our members to go out" +
                     "into town to indulge in some retail therapy that " +
                     "they may wish to do. Afterwards, we'll always " +
@@ -95,7 +95,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 6,
-                    Name = "Music Making",
+                    ActivityName = "Music Making",
                     Description = "A chance for members to flex their " +
                     "creative muscles with a musical session. We have some " +
                     "musically inclined staff members and selection of instuments " +
@@ -107,7 +107,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 7,
-                    Name = "Healthy Eating",
+                    ActivityName = "Healthy Eating",
                     Description = "A cooking session with an " +
                     "emphasis on healthy ingredients and healthy " +
                     "recipes.",
@@ -118,7 +118,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 8,
-                    Name = "Allotment Care",
+                    ActivityName = "Allotment Care",
                     Description = "We have our own " +
                     "allotment a few minutes walk from the " +
                     "site, where our members have the chance " +
@@ -131,7 +131,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 9,
-                    Name = "Social Outing",
+                    ActivityName = "Social Outing",
                     Description = "An opportunity to go out " +
                     "into the town, have a coffee and chat with " +
                     "people, and generally enjoy the outdoors. ",
@@ -142,7 +142,7 @@ namespace ValeActivitiesCentre.Migrations
                 new Activity
                 {
                     ActivityID = 10,
-                    Name = "Relaxation",
+                    ActivityName = "Relaxation",
                     Description = "To wind down the week before " +
                     "the weekend, we hold a relaxation session " +
                     "where various relaxation techniques like mindfulness " +
@@ -161,29 +161,36 @@ namespace ValeActivitiesCentre.Migrations
             {
                 new ActivitySlot
                 {
-                    ActivitySlotID = 1
+                    ActivitySlotID = 1,
+                    ActivitySlotNumber = 1
                 },
                 new ActivitySlot
                 {
-                    ActivitySlotID = 2
+                    ActivitySlotID = 2,
+                    ActivitySlotNumber = 2
                 },
                 new ActivitySlot
                 {
-                    ActivitySlotID = 3
+                    ActivitySlotID = 3,
+                    ActivitySlotNumber = 3
                 },
                 new ActivitySlot
                 {
-                    ActivitySlotID = 4
+                    ActivitySlotID = 4,
+                    ActivitySlotNumber = 4
                 },
                 new ActivitySlot
                 {
-                    ActivitySlotID = 5
+                    ActivitySlotID = 5,
+                    ActivitySlotNumber = 5
                 },
                 new ActivitySlot
                 {
-                    ActivitySlotID = 6
+                    ActivitySlotID = 6,
+                    ActivitySlotNumber = 6
                 }
             };
+            ActivitySlotList.ForEach(s => context.ActivitySlots.AddOrUpdate(p => p.ActivitySlotID, s));
         }
 
         private void SeedAddresses(ValeDbContext context)

@@ -223,6 +223,14 @@
     <Compile Include="Migrations\202003181032235_BookingMigration1.designer.cs">
       <DependentUpon>202003181032235_BookingMigration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003211723487_BookingModelUpdate.cs" />
+    <Compile Include="Migrations\202003211723487_BookingModelUpdate.designer.cs">
+      <DependentUpon>202003211723487_BookingModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003211746433_BookingUpdate2.cs" />
+    <Compile Include="Migrations\202003211746433_BookingUpdate2.designer.cs">
+      <DependentUpon>202003211746433_BookingUpdate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -357,6 +365,7 @@
     <Content Include="Views\Activities\ActivityDetails.cshtml" />
     <Content Include="Views\Home\ActivitiesList.cshtml" />
     <Content Include="Views\Home\StaffTeam.cshtml" />
+    <Content Include="Views\Activities\BookingConfirmation.cshtml" />
     <Content Include="Views\Activities\BookActivity.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -387,6 +396,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003181032235_BookingMigration1.resx">
       <DependentUpon>202003181032235_BookingMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003211723487_BookingModelUpdate.resx">
+      <DependentUpon>202003211723487_BookingModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003211746433_BookingUpdate2.resx">
+      <DependentUpon>202003211746433_BookingUpdate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

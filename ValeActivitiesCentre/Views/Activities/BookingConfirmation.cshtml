@@ -1,0 +1,13 @@
+﻿@model ValeActivitiesCentre.Models.Activity
+@{
+    ViewBag.Title = "Book Activity";
+}
+
+<div class="jumbotron">
+    <h2>Vale Activities Centre</h2>
+    <h3>@ViewBag.Title: Booking Confirmation</h3>
+</div>
+
+<h3>Thank you for booking your place for @Model.Name on @Model.Day @Model.Time</h3>
+<p><img src="~/Images/Activities/Tick.png" alt="@ViewBag.Title" width="200" height="100"/></p>
+
