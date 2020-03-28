@@ -24,16 +24,16 @@ namespace ValeActivitiesCentre.Models
         public string LastName { get; set; }
 
         /// <summary>
-        /// The phone number of a person, assigned to a home phone.
+        /// The main phone number of a person.
         /// </summary>
         [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Home Phone")]
-        public string HomePhoneNumber { get; set; }
+        public string MainContactNumber { get; set; }
 
         /// <summary>
-        /// The phone number of a person, assigned to their mobile phone.
+        /// A secondary contact number for a person .
         /// </summary>
         [StringLength(16), DataType(DataType.PhoneNumber), Display(Name = "Mobile Phone")]
-        public string MobilePhoneNumber { get; set; }
+        public string OtherContactNumber { get; set; }
 
         /// <summary>
         /// An e-mail address held by a person by which they can be contacted

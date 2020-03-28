@@ -162,32 +162,32 @@ namespace ValeActivitiesCentre.Migrations
                 new ActivitySlot
                 {
                     ActivitySlotID = 1,
-                    ActivitySlotNumber = 1
+                    ActivitySlotNumber = "1"
                 },
                 new ActivitySlot
                 {
                     ActivitySlotID = 2,
-                    ActivitySlotNumber = 2
+                    ActivitySlotNumber = "2"
                 },
                 new ActivitySlot
                 {
                     ActivitySlotID = 3,
-                    ActivitySlotNumber = 3
+                    ActivitySlotNumber = "3"
                 },
                 new ActivitySlot
                 {
                     ActivitySlotID = 4,
-                    ActivitySlotNumber = 4
+                    ActivitySlotNumber = "4"
                 },
                 new ActivitySlot
                 {
                     ActivitySlotID = 5,
-                    ActivitySlotNumber = 5
+                    ActivitySlotNumber = "5"
                 },
                 new ActivitySlot
                 {
                     ActivitySlotID = 6,
-                    ActivitySlotNumber = 6
+                    ActivitySlotNumber = "6"
                 }
             };
             ActivitySlotList.ForEach(s => context.ActivitySlots.AddOrUpdate(p => p.ActivitySlotID, s));
@@ -446,8 +446,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 1,
                     FirstName = "William",
                     LastName = "Foster",
-                    HomePhoneNumber = "01296123123",
-                    MobilePhoneNumber = "07762123123",
+                    MainContactNumber = "01296123123",
+                    OtherContactNumber = "07762123123",
                     Email = "William@vac.org.uk",
                     DateOfBirth = new System.DateTime(1994, 8, 28),
                     IsClient = false,
@@ -459,8 +459,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 2,
                     FirstName = "Bethany",
                     LastName = "Dale",
-                    HomePhoneNumber = "01296647431",
-                    MobilePhoneNumber = "07771123123",
+                    MainContactNumber = "01296647431",
+                    OtherContactNumber = "07771123123",
                     Email = "Bethany@vac.org.uk",
                     DateOfBirth = new System.DateTime(1982, 6, 15),
                     IsClient = false,
@@ -472,8 +472,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 3,
                     FirstName = "Katy",
                     LastName = "Smith",
-                    HomePhoneNumber = "01494234567",
-                    MobilePhoneNumber = "07987123876",
+                    MainContactNumber = "01494234567",
+                    OtherContactNumber = "07987123876",
                     Email = "Katy@vac.org.uk",
                     DateOfBirth = new System.DateTime(1972, 3, 21),
                     IsClient = false,
@@ -485,8 +485,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 4,
                     FirstName = "Hendrik",
                     LastName = "Braun",
-                    HomePhoneNumber = "01746826591",
-                    MobilePhoneNumber = "07435172123",
+                    MainContactNumber = "01746826591",
+                    OtherContactNumber = "07435172123",
                     Email = "Hendrik1@mail.com",
                     DateOfBirth = new System.DateTime(1990, 7, 11),
                     IsClient = false,
@@ -498,8 +498,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 5,
                     FirstName = "Jacob",
                     LastName = "Fields",
-                    HomePhoneNumber = "01234987654",
-                    MobilePhoneNumber = "07983456789",
+                    MainContactNumber = "01234987654",
+                    OtherContactNumber = "07983456789",
                     Email = "Jocob1@mail.com",
                     DateOfBirth = new System.DateTime(1992, 11, 12),
                     IsClient = false,
@@ -511,8 +511,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 6,
                     FirstName = "Sophia",
                     LastName = "Eastland",
-                    HomePhoneNumber = "01234987321",
-                    MobilePhoneNumber = "07654123456",
+                    MainContactNumber = "01234987321",
+                    OtherContactNumber = "07654123456",
                     Email = "Julia1@mail.com",
                     DateOfBirth = new System.DateTime(1981, 12, 29),
                     IsClient = false,
@@ -524,8 +524,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 7,
                     FirstName = "Aidan",
                     LastName = "Smith",
-                    HomePhoneNumber = "01576876543",
-                    MobilePhoneNumber = "07890654321",
+                    MainContactNumber = "01576876543",
+                    OtherContactNumber = "07890654321",
                     Email = "Aidan1@mail.com",
                     DateOfBirth = new System.DateTime(1990, 4, 23),
                     IsClient = false,
@@ -538,8 +538,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 8,
                     FirstName = "Michael",
                     LastName = "Barclay",
-                    HomePhoneNumber = "01296456788",
-                    MobilePhoneNumber = "0777554321",
+                    MainContactNumber = "01296456788",
+                    OtherContactNumber = "0777554321",
                     Email = "Michael@mail.com",
                     DateOfBirth = new System.DateTime(1976, 12, 26),
                     IsClient = true,
@@ -551,8 +551,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 9,
                     FirstName = "Stephen",
                     LastName = "Gough",
-                    HomePhoneNumber = "01746276354",
-                    MobilePhoneNumber = "07497735243",
+                    MainContactNumber = "01746276354",
+                    OtherContactNumber = "07497735243",
                     DateOfBirth = new System.DateTime(1994, 2, 28),
                     IsClient = true,
                     IsStaff = false,
@@ -563,8 +563,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 10,
                     FirstName = "MaryAnne",
                     LastName = "Perry",
-                    HomePhoneNumber = "01294325764",
-                    MobilePhoneNumber = "07945172223",
+                    MainContactNumber = "01294325764",
+                    OtherContactNumber = "07945172223",
                     Email = "MaryAnne@mail.com",
                     DateOfBirth = new System.DateTime(1982, 3, 11),
                     IsClient = true,
@@ -576,8 +576,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 11,
                     FirstName = "Ellie",
                     LastName = "Stillford",
-                    HomePhoneNumber = "01746827345",
-                    MobilePhoneNumber = "07163543210",
+                    MainContactNumber = "01746827345",
+                    OtherContactNumber = "07163543210",
                     Email = "Ellie1@mail.com",
                     DateOfBirth = new System.DateTime(1989, 9, 6),
                     IsClient = true,
@@ -589,7 +589,7 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 12,
                     FirstName = "Tasmin",
                     LastName = "Adams",
-                    MobilePhoneNumber = "07364555231",
+                    OtherContactNumber = "07364555231",
                     DateOfBirth = new System.DateTime(1999, 10, 31),
                     IsClient = true,
                     IsStaff = false,
@@ -600,8 +600,8 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 13,
                     FirstName = "Millie",
                     LastName = "Roche",
-                    HomePhoneNumber = "01746987243",
-                    MobilePhoneNumber = "07942987365",
+                    MainContactNumber = "01746987243",
+                    OtherContactNumber = "07942987365",
                     Email = "Millie1@mail.com",
                     DateOfBirth = new System.DateTime(1966, 11, 16),
                     IsClient = true,
@@ -613,7 +613,7 @@ namespace ValeActivitiesCentre.Migrations
                     PersonID = 14,
                     FirstName = "Oliver",
                     LastName = "Eames",
-                    HomePhoneNumber = "01832765946",
+                    MainContactNumber = "01832765946",
                     DateOfBirth = new System.DateTime(1968, 9, 17),
                     IsClient = true,
                     IsStaff = false,

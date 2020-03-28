@@ -36,7 +36,7 @@ namespace ValeActivitiesCentre.Models
 
         public string ActivityName { get; set; }
 
-        public int ActivitySlotNumber { get; set; }
+        public string ActivitySlotNumber { get; set; }
 
         public DayOptions Day { get; set; }
 

@@ -231,6 +231,14 @@
     <Compile Include="Migrations\202003211746433_BookingUpdate2.designer.cs">
       <DependentUpon>202003211746433_BookingUpdate2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003281445454_ContactNumberUpdate.cs" />
+    <Compile Include="Migrations\202003281445454_ContactNumberUpdate.designer.cs">
+      <DependentUpon>202003281445454_ContactNumberUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003281511394_SlotNumberUpdate.cs" />
+    <Compile Include="Migrations\202003281511394_SlotNumberUpdate.designer.cs">
+      <DependentUpon>202003281511394_SlotNumberUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -402,6 +410,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003211746433_BookingUpdate2.resx">
       <DependentUpon>202003211746433_BookingUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003281445454_ContactNumberUpdate.resx">
+      <DependentUpon>202003281445454_ContactNumberUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003281511394_SlotNumberUpdate.resx">
+      <DependentUpon>202003281511394_SlotNumberUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

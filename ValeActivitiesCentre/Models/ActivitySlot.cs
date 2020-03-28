@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,8 @@ namespace ValeActivitiesCentre.Models
         /// The activity slot number that will be viewable 
         /// on the booking system for the client to see.
         /// </summary>
-        public int ActivitySlotNumber { get; set; }
+        [Required, StringLength(1), Display(Name ="Activity Slot Number")]
+        public string ActivitySlotNumber { get; set; }
 
         //Each activity slot is assigned to an activity 
         //public int ActivityID { get; set; }
