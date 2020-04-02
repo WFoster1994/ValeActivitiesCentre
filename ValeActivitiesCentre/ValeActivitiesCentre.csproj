@@ -375,6 +375,7 @@
     <Content Include="Views\Home\StaffTeam.cshtml" />
     <Content Include="Views\Activities\BookingConfirmation.cshtml" />
     <Content Include="Views\Activities\BookActivity.cshtml" />
+    <Content Include="Views\Activities\BookingTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

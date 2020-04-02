@@ -57,8 +57,8 @@ namespace ValeActivitiesCentre.Controllers
         /// a summary of the booking for the user before they
         /// confirm their choice.
         /// </summary>
-       public ActionResult BookActivity(int id)
-       {
+        public ActionResult BookActivity(int id)
+        {
             Booking booking = new Booking();
 
             var activityItem = db.Activities.Where(a => a.ActivityID == id).FirstOrDefault();
@@ -73,7 +73,14 @@ namespace ValeActivitiesCentre.Controllers
             booking.Time = activityItem.Time;
 
             return View(booking);
-       }
+        }
+
+        [HttpGet]
+        public ActionResult BookingTable()
+        {
+            var getBooking = db.Bookings.ToList().OrderByDescending(a => a.BookingID);
+            return View(getBooking);
+        }
 
         public ActionResult BookingConfirmation(int? id)
         {

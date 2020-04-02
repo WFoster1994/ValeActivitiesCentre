@@ -1,18 +1,25 @@
 ﻿@model ValeActivitiesCentre.Models.Booking
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
     ViewBag.Title = "Book Activity";
 }
 
 <h2>@ViewBag.Title</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
 <div class="form-horizontal">
-    <h4>Booking</h4>
+
+    <div class="jumbotron">
+        <h3>Booking Summary</h3>
+    </div>
+
     <hr />
 
     @Html.DisplayFor(model => model.FirstName)
@@ -26,6 +33,7 @@
     @Html.DisplayFor(model => model.Time)
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
     <div class="form-group">
         @Html.LabelFor(model => model.ActivitySlotNumber, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -58,12 +66,12 @@
         </div>
     </div>
 </div>
-}
+    }
 
-<div>
-    @Html.ActionLink("Back to Activity", "ActivityDetails")
-</div>
+    <div>
+        @Html.ActionLink("Back to Activity", "ActivityDetails")
+    </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
