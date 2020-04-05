@@ -22,13 +22,13 @@ namespace ValeActivitiesCentre.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             SeedActivities(context);
+            SeedActivitySlots(context);
             SeedAddresses(context);
             SeedClients(context);
             SeedClientProfiles(context);
             SeedPeople(context);
             SeedStaff(context);
-            SeedRiskAssessments(context);
-            SeedActivitySlots(context);
+            SeedRiskAssessments(context);            
         }
 
         //Seed methods displayed in alphabetical order

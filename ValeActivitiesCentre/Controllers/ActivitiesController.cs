@@ -68,7 +68,6 @@ namespace ValeActivitiesCentre.Controllers
             booking.FirstName = personItem.FirstName;
             booking.LastName = personItem.LastName;
             booking.ActivityName = activityItem.ActivityName;
-            booking.ActivitySlotNumber = activitySlotItem.ActivitySlotNumber;
             booking.Day = activityItem.Day;
             booking.Time = activityItem.Time;
 
