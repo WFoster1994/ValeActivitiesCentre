@@ -22,15 +22,34 @@
 
     <hr />
 
+    @Html.DisplayNameFor(model => model.FirstName)
+    <br />
     @Html.DisplayFor(model => model.FirstName)
+    <hr />
 
+    @Html.DisplayNameFor(model => model.LastName)
+    <br />
     @Html.DisplayFor(model => model.LastName)
+    <hr />
 
+    @Html.DisplayNameFor(model => model.ActivityName)
+    <br />
     @Html.DisplayFor(model => model.ActivityName)
+    <hr />
+    
+    
+    <div class="form-group">
+        @Html.DisplayNameFor(model => model.Day)
+        <br />
+        @Html.DisplayFor(model => model.Day)
 
-    @Html.DisplayFor(model => model.Day)
+        @Html.DisplayNameFor(model => model.Time)
+        <br />
+        @Html.DisplayFor(model => model.Time)
+        <hr />
 
-    @Html.DisplayFor(model => model.Time)
+        <input type="submit" name="CheckAvailability" value="Check Availability" class="btn btn-info"/>
+    </div>
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

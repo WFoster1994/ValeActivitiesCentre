@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace ValeActivitiesCentre.Models
 {
@@ -33,6 +29,8 @@ namespace ValeActivitiesCentre.Models
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public int ActivityID { get; set; }
 
         public string ActivityName { get; set; }
 

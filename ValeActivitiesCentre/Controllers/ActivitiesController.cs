@@ -18,6 +18,8 @@ namespace ValeActivitiesCentre.Controllers
 
         private ValeDbContext db = new ValeDbContext();
 
+        int count = 1;
+        bool flag = true;
 
         // GET: Activities
         public ActionResult Index()
@@ -54,9 +56,11 @@ namespace ValeActivitiesCentre.Controllers
 
         /// <summary>
         /// This method will take the activity ID and create
-        /// a summary of the booking for the user before they
-        /// confirm their choice.
+        /// a summary of the booking for the user. They will 
+        /// provide a slot number they wish to take before 
+        /// the choice is confirmed.
         /// </summary>
+        [HttpGet]
         public ActionResult BookActivity(int id)
         {
             Booking booking = new Booking();
@@ -72,6 +76,56 @@ namespace ValeActivitiesCentre.Controllers
             booking.Time = activityItem.Time;
 
             return View(booking);
+        }
+
+        /// <summary>
+        /// This method will 
+        /// </summary>
+        [HttpPost]
+        public ActionResult BookActivity(Booking booking)
+        {
+            List<Booking> bookings = new List<Booking>();
+            string ActivitySlotNumber = booking.ActivitySlotNumber;
+            int ActivityID = booking.ActivityID;
+
+            string[] ActivitySlotArray = ActivitySlotNumber.Split(',');
+            count = ActivitySlotArray.Length;
+
+            if (CheckAvailability(ActivitySlotNumber, ActivityID) == false)
+            {
+                foreach (var item in ActivitySlotArray)
+                {
+                    bookings.Add(new Booking
+                    {
+                        ClientID = booking.ClientID,
+                        FirstName = booking.FirstName,
+                        LastName = booking.LastName,
+                        ActivityID = booking.ActivityID,
+                        ActivityName = booking.ActivityName,
+                        Day = booking.Day,
+                        Time = booking.Time,
+                        ActivitySlotNumber = item,
+                        EmailSent = booking.EmailSent
+                    });
+                }
+                foreach (var item in bookings)
+                {
+                    db.Bookings.Add(item);
+                }
+                return View();
+            }
+            else
+            {
+
+            }
+
+            return RedirectToAction("BookNow");
+
+        }
+
+        private bool CheckAvailability(string activitySlotNumber, int activityID)
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet]
