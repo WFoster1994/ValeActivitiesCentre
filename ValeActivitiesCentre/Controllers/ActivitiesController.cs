@@ -91,6 +91,7 @@ namespace ValeActivitiesCentre.Controllers
             string[] ActivitySlotArray = ActivitySlotNumber.Split(',');
             count = ActivitySlotArray.Length;
 
+            //If the slot number is not assigned to an activity 
             if (CheckAvailability(ActivitySlotNumber, ActivityID) == false)
             {
                 foreach (var item in ActivitySlotArray)
@@ -111,21 +112,53 @@ namespace ValeActivitiesCentre.Controllers
                 foreach (var item in bookings)
                 {
                     db.Bookings.Add(item);
+                    db.SaveChanges();
                 }
+                //Want to launch the Booking Confimration view here.
                 return View();
             }
             else
             {
-
+                TempData["AlreadyBookedMessage"] = "Sorry, that slot is already booked. " +
+                    "Please change your slot number.";
             }
 
             return RedirectToAction("BookNow");
 
         }
 
+        /// <summary>
+        /// This method will check the available activity slots to determine if 
+        /// one can be booked by the user.
+        /// </summary>
+        /// <returns></returns>
         private bool CheckAvailability(string activitySlotNumber, int activityID)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            string Slots = activitySlotNumber;
+            string[] SlotsBooked = Slots.Split(',');
+            var SlotList = db.Bookings.Where(a => a.BookingID == activityID).ToList();
+            foreach (var SlotListItem in SlotList)
+            {
+                string AlreadyBooked = SlotListItem.ActivitySlotNumber;
+                foreach (var BookedItem in SlotsBooked)
+                {
+                    if (BookedItem == AlreadyBooked)
+                    {
+                        flag = false;
+                        break;
+                    }
+                    
+                }
+               
+            }
+            //If the slot is already booked
+            if (flag == false)
+                return true;
+            //If not reserved
+            else
+                return false;
+                
         }
 
         [HttpGet]
