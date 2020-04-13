@@ -91,5 +91,13 @@ namespace ValeActivitiesCentre.Models
         public virtual ICollection<ActivitySlot> ActivitySlots { get; set; }
 
         public virtual ICollection<Booking> Bookings { get; set; }
+
+        /// <summary>
+        /// The identification of the staff member (person) 
+        /// who is running the activity.
+        /// </summary>
+        public int PersonID { get; set; }
+
+        public virtual Person Person { get; set; }
     }
 }

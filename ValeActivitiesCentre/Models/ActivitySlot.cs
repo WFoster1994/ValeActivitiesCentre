@@ -25,7 +25,7 @@ namespace ValeActivitiesCentre.Models
 
         //Each activity slot is booked by a client
         //public Nullable<int> ClientID { get; set; }
-        public virtual Client Client { get; set; }
+        //public virtual Client Client { get; set; }
 
     }
 }

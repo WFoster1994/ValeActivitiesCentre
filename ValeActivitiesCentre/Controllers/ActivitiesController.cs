@@ -69,8 +69,8 @@ namespace ValeActivitiesCentre.Controllers
             var activitySlotItem = db.ActivitySlots.Where(a => a.ActivitySlotID == id).FirstOrDefault();
             var personItem = db.People.Where(a => a.PersonID == id).FirstOrDefault();
 
-            booking.FirstName = personItem.FirstName;
-            booking.LastName = personItem.LastName;
+            //.FirstName = personItem.FirstName;
+            //booking.LastName = personItem.LastName;
             booking.ActivityName = activityItem.ActivityName;
             booking.Day = activityItem.Day;
             booking.Time = activityItem.Time;
@@ -102,10 +102,11 @@ namespace ValeActivitiesCentre.Controllers
                         FirstName = booking.FirstName,
                         LastName = booking.LastName,
                         ActivityID = booking.ActivityID,
-                        ActivityName = booking.ActivityName,
+                        ActivityName = booking.ActivityName,                        
                         Day = booking.Day,
                         Time = booking.Time,
                         ActivitySlotNumber = item,
+                        BookingStatus = BookingStatus.CONFIRMED,
                         EmailSent = booking.EmailSent
                     });
                 }

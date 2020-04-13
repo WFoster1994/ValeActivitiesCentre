@@ -243,6 +243,10 @@
     <Compile Include="Migrations\202004061118111_BookingClass_ActivityID_Update.designer.cs">
       <DependentUpon>202004061118111_BookingClass_ActivityID_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004131212185_model_relationships_update.cs" />
+    <Compile Include="Migrations\202004131212185_model_relationships_update.designer.cs">
+      <DependentUpon>202004131212185_model_relationships_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -424,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004061118111_BookingClass_ActivityID_Update.resx">
       <DependentUpon>202004061118111_BookingClass_ActivityID_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004131212185_model_relationships_update.resx">
+      <DependentUpon>202004131212185_model_relationships_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

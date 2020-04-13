@@ -26,6 +26,8 @@ namespace ValeActivitiesCentre.Models
 
         public int ClientID { get; set; }
 
+        public string Email { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -34,7 +36,7 @@ namespace ValeActivitiesCentre.Models
 
         public string ActivityName { get; set; }
 
-        public string ActivitySlotNumber { get; set; }
+       public string ActivitySlotNumber { get; set; }
 
         public DayOptions Day { get; set; }
 
