@@ -56,9 +56,7 @@ namespace ValeActivitiesCentre.Models
         [StringLength(255), Display(Name ="Staff Profile")]
         public string Profile { get; set; }
 
-        public virtual Person Person { get; set; }
-
-        public ICollection<Activity> Activities { get; set; }
+        public virtual Person Person { get; set; }       
                 
     }
 }

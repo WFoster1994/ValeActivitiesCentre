@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ValeActivitiesCentre.Models
@@ -75,6 +76,8 @@ namespace ValeActivitiesCentre.Models
         }
 
        public Staff Staff { get; set; }
+
+        public virtual ICollection<Activity> Activities { get; set; }
 
         public Client Client { get; set; }
 

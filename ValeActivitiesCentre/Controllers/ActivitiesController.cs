@@ -60,7 +60,7 @@ namespace ValeActivitiesCentre.Controllers
         /// provide a slot number they wish to take before 
         /// the choice is confirmed.
         /// </summary>
-        [HttpGet]
+        /*[HttpGet]
         public ActionResult BookActivity(int id)
         {
             Booking booking = new Booking();
@@ -76,12 +76,12 @@ namespace ValeActivitiesCentre.Controllers
             booking.Time = activityItem.Time;
 
             return View(booking);
-        }
+        }*/
 
         /// <summary>
         /// This method will 
         /// </summary>
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult BookActivity(Booking booking)
         {
             List<Booking> bookings = new List<Booking>();
@@ -126,14 +126,14 @@ namespace ValeActivitiesCentre.Controllers
 
             return RedirectToAction("BookNow");
 
-        }
+        }*/
 
         /// <summary>
         /// This method will check the available activity slots to determine if 
         /// one can be booked by the user.
         /// </summary>
         /// <returns></returns>
-        private bool CheckAvailability(string activitySlotNumber, int activityID)
+       /* private bool CheckAvailability(string activitySlotNumber, int activityID)
         {
             //throw new NotImplementedException();
             string Slots = activitySlotNumber;
@@ -160,7 +160,7 @@ namespace ValeActivitiesCentre.Controllers
             else
                 return false;
                 
-        }
+        } */
 
         [HttpGet]
         public ActionResult BookingTable()

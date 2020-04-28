@@ -7,13 +7,13 @@ namespace ValeActivitiesCentre.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class model_relationships_update : IMigrationMetadata
+    public sealed partial class modelrelationshipupdate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(model_relationships_update));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(modelrelationshipupdate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004131212185_model_relationships_update"; }
+            get { return "202004211514538_model-relationship-update"; }
         }
         
         string IMigrationMetadata.Source

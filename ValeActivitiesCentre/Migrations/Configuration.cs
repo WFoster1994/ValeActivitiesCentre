@@ -22,7 +22,7 @@ namespace ValeActivitiesCentre.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
             SeedActivities(context);
-            SeedActivitySlots(context);
+            //SeedActivitySlots(context);
             SeedAddresses(context);
             SeedClients(context);
             SeedClientProfiles(context);
@@ -155,7 +155,7 @@ namespace ValeActivitiesCentre.Migrations
             ActivityList.ForEach(s => context.Activities.AddOrUpdate(p => p.ActivityID, s));
         }
 
-        private void SeedActivitySlots(ValeDbContext context)
+        /*private void SeedActivitySlots(ValeDbContext context)
         {
             var ActivitySlotList = new List<ActivitySlot>
             {
@@ -191,7 +191,7 @@ namespace ValeActivitiesCentre.Migrations
                 }
             };
             ActivitySlotList.ForEach(s => context.ActivitySlots.AddOrUpdate(p => p.ActivitySlotID, s));
-        }
+        }*/
 
         private void SeedAddresses(ValeDbContext context)
         {
