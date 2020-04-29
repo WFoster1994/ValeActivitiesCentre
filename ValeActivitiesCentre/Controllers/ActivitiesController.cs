@@ -125,7 +125,30 @@ namespace ValeActivitiesCentre.Controllers
 
         private bool CheckAvailability(string activitySlotNumber, int activityID)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            string Slots = activitySlotNumber;
+            string[] SlotsBooked = Slots.Split(',');
+            var SlotList = db.Bookings.Where(a => a.BookingID == activityID).ToList();
+            foreach (var SlotListItem in SlotList)
+            {
+                string AlreadyBooked = SlotListItem.ActivitySlotNumber;
+                foreach (var BookedItem in SlotsBooked)
+                {
+                    if (BookedItem == AlreadyBooked)
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                }
+
+            }
+            //If the slot is already booked
+            if (flag == false)
+                return true;
+            //If not reserved
+            else
+                return false;
         }
 
         [HttpGet]
