@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ValeActivitiesCentre.Models
@@ -55,7 +56,7 @@ namespace ValeActivitiesCentre.Models
         [StringLength(255), Display(Name ="Staff Profile")]
         public string Profile { get; set; }
 
-        public virtual Person Person { get; set; }
+        public virtual Person Person { get; set; }       
                 
     }
 }

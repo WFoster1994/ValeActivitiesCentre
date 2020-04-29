@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ValeActivitiesCentre.Models
 {
@@ -37,7 +33,6 @@ namespace ValeActivitiesCentre.Models
         LIMITED,
         [Display(Name ="Full")]
         FULL
-
     }
 
     public class Activity
@@ -91,5 +86,11 @@ namespace ValeActivitiesCentre.Models
         public virtual ICollection<ActivitySlot> ActivitySlots { get; set; }
 
         public virtual ICollection<Booking> Bookings { get; set; }
+
+        /// <summary>
+        /// The details of the staff member (person) 
+        /// who is running the activity.
+        /// </summary>
+        public virtual Person Person { get; set; }
     }
 }
